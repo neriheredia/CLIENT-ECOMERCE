@@ -23,6 +23,7 @@ const Login = () => {
     const dispatch = useDispatch();
     const [error, setError] = useState(false);
     const user = useSelector(state => state.user)
+
     const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -69,7 +70,6 @@ const Login = () => {
                         })
                         :
                         navigate('/');
-
                 })
                 .catch(err => console.log(err))
         }
